@@ -1,0 +1,48 @@
+<!doctype html>
+ <html>
+  <head>
+
+  	<link href="turtleraceWebpage.css" type="text/css" rel="stylesheet"/>
+  
+  </head>
+   <body>
+   	   	
+   	<div id="head"><h1>Rabbit Turtle Race</h1></div>
+   	
+   	<div id="image"><img src="http://3.bp.blogspot.com/-WOtkuwK_RIs/Tb6Q1ftdSmI/AAAAAAAAAJs/Fz9QNEdH7sY/s1600/rabbit-n-turtle-300x218.gif"/>
+   	</div>
+   	
+   	<div id="question"><p>Which animal will win in this race?</p></div>
+
+   <script>
+	var Animal = function(n, s, f) {
+		this.name = n;
+		this.speed = s;
+		this.focus= f;
+		this.position = 0;
+		this.report = function() {
+			return this.name + " is at " + this.position;
+		};
+		this.run = function() {
+			if(this.focus > (Math.random() * 10)) {
+			this.position += this.speed;
+			}
+		};
+	}
+		
+	var turtle = new Animal("Pete", 2, 8.5),
+		rabbit = new Animal("Mopsy", 8, 4);
+		
+	var distance = 25;
+	
+	while(turtle.position < distance && rabbit.position < distance) {
+		turtle.run();
+		rabbit.run();
+	};
+		
+	alert(turtle.report());
+	alert(rabbit.report());
+
+</script>
+   </body>
+ </html>

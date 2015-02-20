@@ -1,0 +1,18 @@
+h1 {
+  text-align: Center;
+}
+
+body {
+  background-color: Green;
+}
+
+#image {
+  text-align: Center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#question {
+  text-align: Center
+}
